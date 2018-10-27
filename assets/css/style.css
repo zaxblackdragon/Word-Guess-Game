@@ -4,42 +4,41 @@ body {
     max-width: 960px;
     
 }
-.container {
-    background: #fff;
+#master-container {
+    background:gray;
     width: 100%;
     height: 500px;
     margin-top: 20px;
     margin-left: 20px;
+    border: 10px solid #fff;
     border-radius: 10px;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+
+}
+#master-col-container {
+  
 }
 .row {
-    display:none;
-    background:gray;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top:10px;
+    display: -ms-inline-grid;
 }
-#body {
-    /* background: #fff; */
-    /* padding: 15px; */
-    /* padding-right: 15px; */
-    /* margin: 20px;
-    max-height: 600px;
-    max-width: 100%;
-    border-radius: 10px; */
+#logo {
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
-#textRow {
-    padding: 15px;
-    background: #fff;
+#left-col {
+    float: left;
+    background: skyblue;
+    max-width: 50%;
+    border-right:2px solid #fff;
 }
-#testCol {
-    /* height: 500px;
-    background: gray;
-    width: 930px; */
-    /* margin: 15px; */
-    /* border-radius: 5px; */
+#right-col {
+    float: left;
+    background: yellow;
+    max-width: 50%;
+    /* margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px; */
+    
 }
