@@ -9,12 +9,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href=" https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
     <!-- below is the boostrap style rest -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- below is my css style rest -->
     <!-- note that the last style sheet is top of the Hierarchy -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    
-
-    <script src="main.js"></script>
+    <!-- below is the jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- below is the link to my js file -->
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -24,18 +24,25 @@
          <h1 id="logo" class="col-md-12">Word Guess Game!</h1>
       
         <div id="master-col-container" class="container">
+
             <div id="left-col" class="col-md-12">
                 <p>Press a key to begin.</p>
                 <div id="theme">
                     <h4>Theme:</h4>
                     <p>music</p>
+                    <button class="pressMe">press me</button>
+                    <input id="open" type="button" value="Hint">
                 </div>
             </div>
+
             <div id="right-col" class="col-md-12">
                 <div id="Wins">Wins _ _ _ _ _ _ _ </div>
                 <div id="lettersGuessed">previous guesses</div>
             </div>
-        </div>
+         
+        </div
+        
+        >
     </div>
 
     
