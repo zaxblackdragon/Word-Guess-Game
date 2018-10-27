@@ -31,14 +31,16 @@ body {
     float: left;
     background: skyblue;
     max-width: 50%;
+    height: 385px;
     border-right:2px solid #fff;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
 }
 #right-col {
     float: left;
     background: yellow;
     max-width: 50%;
-    /* margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px; */
-    
+    height: 385px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
 }
