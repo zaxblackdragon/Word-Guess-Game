@@ -5,6 +5,8 @@
     // });
 
 $(document).ready(function(){
+
+    // Turn the below into an opject obj = theme, key =  word, val = arr of letters
 var colors = [ 'red', 'blue', 'green' ];
 var hairStyles = [ 'afro', 'behive', 'Mullet' ];
 var style = [ 'lava lamp', 'disco ball', 'platform shoes' ];
@@ -20,6 +22,15 @@ var missedGuess = 10;
 //             => word to guess for comparison
 //        2. Guesses 
 //              onClick: 
+var userInput = "";
+
+$(this).on("keyup", function(){
+    
+    $( ".guessed" ).append( document.createTextNode( "Hello" ) )
+
+    });
+// $( "#lettersGuessed" ).append( "<p>Test</p>" );
+
 //                  iteration:
 //               var letterCompare = function () {     
      //                  if (userInput typeof  != string) {
