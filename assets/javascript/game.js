@@ -1,64 +1,61 @@
 
-//      basic jquery function syntax
-    // $(function () {
-    //     console.log('this works too');
-    // });
 
-$(document).ready(function(){
 
-    // Turn the below into an opject obj = theme, key =  word, val = arr of letters
-var colors = [ 'red', 'blue', 'green' ];
-var hairStyles = [ 'afro', 'behive', 'Mullet' ];
-var style = [ 'lava lamp', 'disco ball', 'platform shoes' ];
-var missedGuess = 10; 
-//      Steps:
-//      1. onClick ANY KEY to  load the following
-//          visuals:
-//              => theme name (ie : colors) 
-//              => word to guess  in  the form of placeHolder = "_ "
-//              => set the guess counter to 0
-//  
-//            In the back
-//             => word to guess for comparison
-//        2. Guesses 
-//              onClick: 
-var userInput = "";
+ $(document).ready(function() {
 
-$(this).on("keyup", function(){
-    
-    $( ".guessed" ).append( document.createTextNode( "Hello" ) )
+    document.onkeyup = function () {
+        var userguess = String.fromCharCode(event.keyCode).toLowerCase();
+        $("#userGuess").append(userguess);
+    };
+
+    $(".themeChoices").on("click", function(){
+        for (var i = 0; i < logic.length; i++) {
+            $("#theme").append("logic.");
+        }
+        
+        }) ;
+
+        // theme object with words
+     var logic = [{
+            themes: "Hairstyles" ,
+            words: ["afro", "mullet"]
+        },
+        {
+            themes: "cars" ,
+            words: ["honda", "ford"]
+        },
+    ];
+        // user select theme
+        //          user input 
+        //          type  checks to see if the letter is in the word.
+        //    if the letter is there replace the _ 
+        //     if not got to usecs  letters and reduce guesses   
+        //      if user guesses the word b4 the guesses are used acc Wins
+
+
+
+
 
     });
-// $( "#lettersGuessed" ).append( "<p>Test</p>" );
-
-//                  iteration:
-//               var letterCompare = function () {     
-     //                  if (userInput typeof  != string) {
-    //                      alert('Please choose a letter')
-    //                   } else if (missedGuess  === 0) {
-    //                      alert('Game Over! You lose sucka!')
-    //                  } else {
-                //              for (var i = 0; i < array.length; i++) {
-                //                  if (userInput !== array[i]) {
-                //                      alert('Please choose a letter')
-                //                   }  else if (char === letterInWord) {
-                //                      placeHolder = userInput;
-                //                  }  else {
-                //                      log to previous guesses;
-                //                      missedGuess--;
-                //                  }
-                //              }
-    //             };
-    //            letterCompare();
-
-
-
-    $('.pressMe').on('click', function () {
-        alert("pressed");
-    });
-    $('#open').on('click', function () {
-        alert("opened");
-    });
-
- 
- });
+    // var logic = [{
+    //     themes: 'car',
+    //     words: [
+    //         'honda', 'civic', 'toyota'
+    //     ],}, 
+    //     {
+    //     themes: 'hairstyles',
+    //     words: [
+    //         'afro', 'mohakw', 'nothing'
+    //     ], }, {
+    //     themes: 'other',
+    //     words: [
+    //         'afd', 'asdf', 'adsf'
+    //     ], }, 
+    // ];
+    // var answers = 0;
+    // var wrongAsnwer = 0;
+    // var quesses = 10;
+    // var currentquestion= questions;
+    // for ( var i = 0; i < logic.length; i++){
+    //     $('#themechoices').html('<h1>' + logic.themes[i] + '</h1>' );
+    // }
