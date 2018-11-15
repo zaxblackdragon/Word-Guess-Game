@@ -2,18 +2,50 @@
 
 
  $(document).ready(function() {
+    var lettersTyped = [];
+    var compWord;
+    var userguess;
+    
 
-    document.onkeyup = function () {
-        var userguess = String.fromCharCode(event.keyCode).toLowerCase();
-        $("#userGuess").append(userguess);
-    };
+    $(document).on ("keyup", function () {
+       
+        userguess = String.fromCharCode(event.keyCode).toLowerCase();
+       
+      
+       if (lettersTyped.indexOf(userguess) === -1) {
+            lettersTyped.push(userguess);
+            //console.log(lettersTyped);
+            $("#userGuess").html(lettersTyped);
+       }
+       
+       for (var i = 0; i < compWord.length; i++) {
+        //console.log(compWord[i]);
+        while ()
+       };
 
+    });
+    
     $(".themeChoices").on("click", function(){
-        for (var i = 0; i < logic.length; i++) {
-            $("#theme").append("logic.");
-        }
+        var randomNum = Math.floor(Math.random() * logic.length);
+
+        $("#theme").html(logic[randomNum].themes);
+
+        var word = logic[randomNum].words
+            word.length;
+        var randomNumWord = Math.floor(Math.random() * word.length);
+
+
+        compWord = word[randomNumWord];
+        //console.log(compWord);
         
-        }) ;
+        var placeHolder = [];
+        for (var i = 0; i < compWord.length; i++) {
+            //for every letter in word + "_" html
+            placeHolder.push('_ ');
+            //console.log(placeHolder);
+        }
+        $("#placeHolder").html(placeHolder);
+        });
 
         // theme object with words
      var logic = [{
@@ -23,6 +55,10 @@
         {
             themes: "cars" ,
             words: ["honda", "ford"]
+        },
+        {
+            themes: "animals" ,
+            words: ["horse", "dog"]
         },
     ];
         // user select theme
