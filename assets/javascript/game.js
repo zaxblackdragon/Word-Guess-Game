@@ -20,7 +20,7 @@
        
        for (var i = 0; i < compWord.length; i++) {
         //console.log(compWord[i]);
-        while ()
+        //while () -> instead of if.  while(compWord[i] === userguess) keep iterating through the word and replace the userguess letter with the placeholder.  
        };
 
     });
